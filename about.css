@@ -144,4 +144,49 @@
     width: 250px; 
     height: auto; 
   }
+
+  .map-large {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   
+    
+  
+    background-image: url(../pictures/kakoDoNas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.map-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #b8b6b6;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: 500px;
+  height: 450px;
+  background-color: #ffffff;
+  margin-top: 50px;
+}
+
+
+
+.map-small > p {
+  padding: 0 10px;
+  color: #1a1818;
+}
+
+.map-small p span a {
+  color: #3386d4;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.map-iframe iframe {
+  width: calc(2 * 500px + 20px);
+  height: 400px;
+  margin-bottom: 50px;
+}
+
+
