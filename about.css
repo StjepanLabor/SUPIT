@@ -1,163 +1,153 @@
 .out-values {
-    background-color: #e6e6e6;
-    padding: 50px;
+  background-color: #e6e6e6;
+  padding: 50px;
 }
 
 .out-values p {
-    
-    font-family: "Imperial Script", cursive;
-    
+  font-family: "Imperial Script", cursive;
 }
 
-.out-values> p{
-    max-width: 900px;
-    margin: 0 auto;
+.out-values > p {
+  max-width: 900px;
+  margin: 0 auto;
 }
-.second-paragraph{
-    margin-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    
-    padding-bottom: 30px;
+.second-paragraph {
+  margin-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  padding-bottom: 30px;
 }
 
 #boxes {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    gap: 20px;
-    justify-content: center;
-    
-  }
-  
-  .box {
-    border: 1px solid #b8b6b6;
-    max-width: 400px;
-    border-radius: 5px;
-    
-  }
-  
-  #boxes .box h3 {
-    text-transform: uppercase;
-    padding-left: 20px;
-  }
-  
-  .box > p {
-    color: #a3a2a2;
-    padding: 5px;
-    
-  }
-  
-  
-  .gray-line {
-    height: 2px;
-    width: 90%;
-    background-color: #eae7e7;
-    margin: 0px 20px;
-    
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 20px;
+  justify-content: center;
+}
 
+.box {
+  border: 1px solid #b8b6b6;
+  max-width: 400px;
+  border-radius: 5px;
+}
 
-  .boxes-history {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .historybox-9 {
-    border: 1px solid #b8b6b6;
-    max-width: 400px;
-    border-radius: 5px;
-  }
-  
-  .boxes-history .historybox-9 h3 {
-    text-transform: uppercase;
-    padding-left: 20px;
-  }
-  
-  .boxes-history .historybox-9 h3 span {
-    color: #3386d4;
-  }
-  .historybox-9 > p {
-    color: #b0aeae;
-    padding: 10px;
-  }
-  
-  .gray-line-history {
-    height: 2px;
-    width: 350px;
-    background-color: #ebe8e8;
-    margin: 0px 20px;
-  }
-  .third-paragraph{
-    margin-top: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
-    
-    padding-bottom: 30px;
+#boxes .box h3 {
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.box > p {
+  color: #a3a2a2;
+  padding: 5px;
+}
+
+.gray-line {
+  height: 2px;
+  width: 90%;
+  background-color: #eae7e7;
+  margin: 0px 20px;
+}
+
+.boxes-history {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.historybox-9 {
+  border: 1px solid #b8b6b6;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.boxes-history .historybox-9 h3 {
+  text-transform: uppercase;
+  padding-left: 20px;
+}
+
+.boxes-history .historybox-9 h3 span {
+  color: #3386d4;
+}
+.historybox-9 > p {
+  color: #b0aeae;
+  padding: 10px;
+}
+
+.gray-line-history {
+  height: 2px;
+  width: 350px;
+  background-color: #ebe8e8;
+  margin: 0px 20px;
+}
+.third-paragraph {
+  margin-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  padding-bottom: 30px;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .box-pictures {
-    margin-right: 5px;
-    max-width: 400px;
-    height: 250px; 
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .container .box-pictures > h3 {
-    text-transform: uppercase;
-    padding-bottom: 20px;
-    max-height: 60px;
-  }
-  
-  .gray-line-algebra {
-    height: 2px;
-    width: 400px;
-    background-color: #ebe8e8;
-  }
-  
-  .box-pictures img {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block; 
-    height: auto;
-  }
-  
-  .image {
-    width: 100px; 
-    height: auto; 
-  }
-  
-  .large-image {
-    width: 250px; 
-    height: auto; 
-  }
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  justify-content: center;
+  gap: 20px;
+}
 
-  .map-large {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-  
-    
-  
-    background-image: url(../pictures/kakoDoNas.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.box-pictures {
+  margin-right: 5px;
+  max-width: 400px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .box-pictures > h3 {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  max-height: 60px;
+}
+
+.gray-line-algebra {
+  height: 2px;
+  width: 400px;
+  background-color: #ebe8e8;
+}
+
+.box-pictures img {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  height: auto;
+}
+
+.image {
+  width: 100px;
+  height: auto;
+}
+
+.large-image {
+  width: 250px;
+  height: auto;
+}
+
+.map-large {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(../pictures/kakoDoNas.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .map-box {
   display: flex;
   flex-direction: column;
@@ -169,8 +159,6 @@
   background-color: #ffffff;
   margin-top: 50px;
 }
-
-
 
 .map-small > p {
   padding: 0 10px;
@@ -188,5 +176,3 @@
   height: 400px;
   margin-bottom: 50px;
 }
-
-

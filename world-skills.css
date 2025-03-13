@@ -1,151 +1,144 @@
 #world-skill-section {
-    width: 100%;
-    overflow: hidden; 
-    position: relative;
-    text-align: center;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
 }
 
 #img-world-skill {
-     width: 100%;
-    height: 330px;
-    max-height: 400px;
-    
-    object-position: top;
-    object-fit: cover; 
-    
+  width: 100%;
+  height: 330px;
+  max-height: 400px;
+
+  object-position: top;
+  object-fit: cover;
 }
 
 /*h2 element over image*/
 .overlay-text {
-    position: absolute;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: azure;
   font-size: 30px;
   text-shadow: 1px 1px 2px black;
-  width: 80%;  
+  width: 80%;
 }
 
-
-.josip-stanesic{
-    position: absolute;
-    bottom: 385px;
-    
-
+.josip-stanesic {
+  position: absolute;
+  bottom: 385px;
 }
 
 .about-us {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .about-us h2 {
-    font-size: 32px; 
-    color: #333;
-    margin-bottom: 10px; /* Added margin for better spacing */
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px; /* Added margin for better spacing */
 }
 
 .yellow-line {
-    width: 700px;
-    height: 3px;
-    background-color: rgb(245, 220, 1);
-    margin: 10px auto;
+  width: 700px;
+  height: 3px;
+  background-color: rgb(245, 220, 1);
+  margin: 10px auto;
 }
 
 #world-skill-section p {
-    padding-top: 20px;
-    line-height: 1.6;
-    font-size: 18px;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: justify;
-    
+  padding-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: justify;
 }
 
 .img-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 50px;
-    gap: 20px;
-  }
-  
-  .img-container img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    filter: grayscale(0.5) brightness(1.2); /* low brightness and gray scale */
-  
-    transition: transform 0.3s ease, filter 0.3s ease; /* animation for transform and filters */
-  }
-  
-  .img-container img:hover {
-    transform: scale(1.1);
-    filter: grayscale(0) brightness(1);
-  }
-  /* Modal */
-  .modal {
-    display: none; /* hidden by default */
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #modal-image {
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 10px;
-    position: relative; /* position inside of the image */
-  }
-  
-  .close-modal,
-  .prev,
-  .next {
-    position: absolute;
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 2; /* buttons larger index that images */
-  }
-  
-  .close-modal {
-    top: 25%;
-    right: 12%;
-    padding: 10px;
-  }
-  
-  .prev,
-  .next {
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 10px;
-  }
-  
-  .prev {
-    left: 10%;
-  }
-  
-  .next {
-    right: 10%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 20px;
+}
 
-  #world-skill-video {
-    display: flex;
-    justify-content: center;
-    margin: 40px 0;
-    position: relative;
-  }
-  
-  #world-skill-video video {
-    width: 100%;
-    max-width: calc(2 * 300px + 20px);
-  }
-  
+.img-container img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  filter: grayscale(0.5) brightness(1.2); /* low brightness and gray scale */
 
+  transition: transform 0.3s ease, filter 0.3s ease; /* animation for transform and filters */
+}
+
+.img-container img:hover {
+  transform: scale(1.1);
+  filter: grayscale(0) brightness(1);
+}
+/* Modal */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-image {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+  position: relative; /* position inside of the image */
+}
+
+.close-modal,
+.prev,
+.next {
+  position: absolute;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2; /* buttons larger index that images */
+}
+
+.close-modal {
+  top: 25%;
+  right: 12%;
+  padding: 10px;
+}
+
+.prev,
+.next {
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+}
+
+.prev {
+  left: 10%;
+}
+
+.next {
+  right: 10%;
+}
+
+#world-skill-video {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+#world-skill-video video {
+  width: 100%;
+  max-width: calc(2 * 300px + 20px);
+}

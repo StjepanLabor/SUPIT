@@ -1,45 +1,42 @@
 #digital-junior-section {
-    width: 100%;
-    overflow: hidden; /*hide part of image */
-    position: relative;
-    text-align: center;
+  width: 100%;
+  overflow: hidden; /*hide part of image */
+  position: relative;
+  text-align: center;
 }
 
 #img-dig-junior {
-    width: 100%;
-    object-fit: cover;
-    width: 100%;
-    height: 330px;
-    object-position: top;
-    
+  width: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 330px;
+  object-position: top;
 }
 
-
-
 .about-us h2 {
-    font-size: 32px; /* Increased font size */
-    color: #333;
-    margin-bottom: 10px; /* Added margin for better spacing */
+  font-size: 32px; /* Increased font size */
+  color: #333;
+  margin-bottom: 10px; /* Added margin for better spacing */
 }
 
 .yellow-line {
-    width: 700px;
-    height: 3px;
-    background-color: rgb(255, 217, 0);
-    margin: 10px auto;
+  width: 700px;
+  height: 3px;
+  background-color: rgb(255, 217, 0);
+  margin: 10px auto;
 }
 
 #digital-junior-section p {
-    padding-top: 20px;
-    line-height: 1.6;
-    font-size: 18px;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: justify;
+  padding-top: 20px;
+  line-height: 1.6;
+  font-size: 18px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: justify;
 }
 .text-digital-junior {
-    max-width: 90%; /* Proširuje se do 90% ekrana */
-    width: 100%; /* Zauzima punu širinu dostupnog kontejnera */
-    margin: 0 auto; /* Centriranje */
-    padding: 0 20px; /* Dodaje malo prostora sa strana za bolju čitljivost */
+  max-width: 90%; /* Proširuje se do 90% ekrana */
+  width: 100%; /* Zauzima punu širinu dostupnog kontejnera */
+  margin: 0 auto; /* Centriranje */
+  padding: 0 20px; /* Dodaje malo prostora sa strana za bolju čitljivost */
 }
