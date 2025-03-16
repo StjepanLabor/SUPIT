@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css " />
+    <link rel="stylesheet" href="login-registration.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <ul class="nav-list">
+          <li>
+            <a href="login.html">
+              <img src="./icons/login.svg" alt="login" />Prijavi se
+            </a>
+          </li>
+          <li>
+            <a href="index.html">
+              <img src="./icons/home.svg" alt="home" />Početna</a
+            >
+          </li>
+          <li>
+            <a href="about.html">
+              <img src="./icons/about us.svg" alt="about us" />O nama</a
+            >
+          </li>
+          <li>
+            <a href="news.html">
+              <img src="./icons/info.svg" alt="info" />Novosti</a
+            >
+          </li>
+          <li>
+            <a href="contact.html"
+              ><img src="./icons/mail.svg" alt="contact" />Kontakt</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="section-form">
+      <form id="form">
+        <legend>PRIJAVA KORISNIKA</legend>
+        <div class="form-parameters">
+          <label for="username">Korisničko ime</label>
+          <input
+            type="email"
+            id="username"
+            name="username"
+            placeholder="Unesite korisničko ime"
+            required
+          />
+        </div>
+        <div class="form-parameters">
+          <label for="password">Lozinka</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Lozinka"
+            required
+          />
+        </div>
+        <button type="submit">Prijavi se</button>
+
+        <div class="register-link">
+          Nemaš račun? <a href="#">Registriraj se</a>
+        </div>
+      </form>
+    </section>
+  </body>
+  <footer>
+    <div class="footer-of-page">
+      <h2 id="first">Budi izvrstan u onom što voliš</h2>
+      <h2 id="second">Zaiskri</h2>
+    </div>
+  </footer>
+</html>
