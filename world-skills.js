@@ -1,58 +1,56 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".img-container img");
-  const modal = document.getElementById("image-modal");
-  const modalImage = document.getElementById("modal-image");
-  const closeModal = document.querySelector(".close-modal");
-  const prevButton = document.querySelector(".prev");
-  const nextButton = document.querySelector(".next");
+$(document).ready(function () {
+  const images = $(".img-container img");
+  const modal = $("#image-modal");
+  const modalImage = $("#modal-image");
+  const closeModal = $(".close-modal");
+  const prevButton = $(".prev");
+  const nextButton = $(".next");
 
   let currentIndex = 0;
-  let imageSources = [];
+  let imageSources = images
+    .map(function () {
+      return $(this).attr("src");
+    })
+    .get();
 
-  // Prikupljanje svih src atributa slika
-  images.forEach((img, index) => {
-    imageSources.push(img.src);
-    img.addEventListener("click", function () {
-      openModal(index);
-    });
+  images.on("click", function () {
+    currentIndex = images.index(this);
+    openModal(currentIndex);
   });
 
   function openModal(index) {
     currentIndex = index;
-    modalImage.src = imageSources[currentIndex];
-    modal.style.display = "flex";
+    modalImage.attr("src", imageSources[currentIndex]);
+    modal.css("display", "flex");
   }
 
   function closeModalFunction() {
-    modal.style.display = "none";
+    modal.css("display", "none");
   }
 
   function showNextImage() {
     currentIndex = (currentIndex + 1) % imageSources.length;
-    modalImage.src = imageSources[currentIndex];
+    modalImage.attr("src", imageSources[currentIndex]);
   }
 
   function showPreviousImage() {
     currentIndex =
       (currentIndex - 1 + imageSources.length) % imageSources.length;
-    modalImage.src = imageSources[currentIndex];
+    modalImage.attr("src", imageSources[currentIndex]);
   }
 
-  // Event listeneri
-  closeModal.addEventListener("click", closeModalFunction);
-  nextButton.addEventListener("click", showNextImage);
-  prevButton.addEventListener("click", showPreviousImage);
+  closeModal.on("click", closeModalFunction);
+  nextButton.on("click", showNextImage);
+  prevButton.on("click", showPreviousImage);
 
-  // Zatvaranje modala klikom izvan slike
-  modal.addEventListener("click", function (e) {
-    if (e.target === modal) {
+  modal.on("click", function (e) {
+    if ($(e.target).is(modal)) {
       closeModalFunction();
     }
   });
 
-  // Navigacija strelicama na tipkovnici
-  document.addEventListener("keydown", function (e) {
-    if (modal.style.display === "flex") {
+  $(document).on("keydown", function (e) {
+    if (modal.css("display") === "flex") {
       if (e.key === "ArrowRight") showNextImage();
       if (e.key === "ArrowLeft") showPreviousImage();
       if (e.key === "Escape") closeModalFunction();
