@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="global.css" />
-    <link rel="stylesheet" href="login-registration.css">
+    <link rel="stylesheet" href="login-registration.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -40,30 +41,33 @@
       </nav>
     </header>
     <section id="section-form">
-        <form id="form">
-          <legend>REGISTRACIJA KORISNIKA</legend>
-          <div class="form-parameters">
-            <label for="username">Korisničko ime</label>
-            <input
-              type="email"
-              id="username"
-              name="username"
-              placeholder="Unesite korisničko ime"
-              required
-            />
-          </div>
-          <div class="form-parameters">
-            <label for="password">Lozinka</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Lozinka"
-              required
-            />
-          </div>
-          <button type="submit">Registriraj se</button>
-      </section>
+      <form id="form">
+        <legend>REGISTRACIJA KORISNIKA</legend>
+        <div class="form-parameters">
+          <label for="username">Korisničko ime</label>
+          <input
+            type="email"
+            id="username"
+            name="username"
+            placeholder="Unesite korisničko ime"
+            required
+          />
+        </div>
+        <div class="form-parameters">
+          <label for="password">Lozinka</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Lozinka"
+            required
+          />
+        </div>
+        <button type="submit">Registriraj se</button>
+      </form>
+    </section>
+    <div id="kontakt-modal-placeholder"></div>
+    <script src="./registration.js"></script>
   </body>
   <footer>
     <div class="footer-of-page">

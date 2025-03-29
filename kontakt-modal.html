@@ -33,15 +33,25 @@
             >
               <div class="mb-3">
                 <label for="fullName" class="form-label">Puno ime</label>
-                <input type="text" class="form-control" id="fullName" />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  name="FullName"
+                />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" />
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="Email"
+                />
               </div>
               <div class="mb-3">
                 <label for="priority" class="form-label">Važnost poruke</label>
-                <select class="form-select" id="priority">
+                <select class="form-select" id="priority" name="Iportance">
                   <option selected>Visoka</option>
                   <option>Srednja</option>
                   <option>Niska</option>
@@ -49,32 +59,39 @@
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Poruka</label>
-                <textarea class="form-control" id="message" rows="4"></textarea>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  name="Message"
+                ></textarea>
               </div>
               <div class="form-check mb-3">
                 <input
                   type="checkbox"
                   class="form-check-input"
                   id="notifications"
+                  name="ReceiveNewsletter"
                 />
                 <label class="form-check-label" for="notifications"
                   >Želim primati obavijesti</label
                 >
               </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Pošalji</button>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-bs-dismiss="modal"
+                >
+                  Odustani
+                </button>
+              </div>
             </form>
-          </div>
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Pošalji</button>
-            <button
-              type="button"
-              class="btn btn-danger"
-              data-bs-dismiss="modal"
-            >
-              Odustani
-            </button>
           </div>
         </div>
       </div>
     </div>
+    <script src="./contact.js"></script>
   </body>
 </html>

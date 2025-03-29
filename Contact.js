@@ -4,7 +4,7 @@ jQuery(document).ready(function () {
     var form = jQuery(this);
 
     // Provjerava jeli je checkbox označen i postavlja vrijednost
-    var receiveNewsletter = jQuery("#receiveNewsletter").prop("checked")
+    var receiveNewsletter = jQuery("#notifications").prop("checked")
       ? "true"
       : "false";
 
