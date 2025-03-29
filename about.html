@@ -28,12 +28,17 @@
             <li><a href="about.html"> <img src="./icons/about us.svg" alt="about us">O nama</a></li>
             <li><a href="news.html"> <img src="./icons/info.svg" alt="info">Novosti</a></li>
             
-            <a href="" class="header-link-contact" data-bs-toggle="modal" data-bs-target="#kontaktModal"> <img src="./icons/mail.svg" alt="">Kontakt</a>
+            <a href="#" class="header-link-contact" data-bs-toggle="modal" data-bs-target="#kontaktModal">
+              <img src="./icons/mail.svg" alt="">Kontakt
+            </a>
             
         </ul>
     </nav>
 
 </header>
+
+
+
 
     <section id="first section">
         <img src="./pictures/kampus-iz-zraka-min-1.jpg" alt="kampus" id="campus">
@@ -468,54 +473,22 @@
 
       
           
-<!-- Kontakt Modal -->
-<div class="modal fade" id="kontaktModal" tabindex="-1" aria-labelledby="kontaktModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="kontaktModalLabel">
-          <i class="bi bi-envelope-fill me-2"></i>Kontaktirajte nas
-        </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Zatvori"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="fullName" class="form-label">Puno ime</label>
-            <input type="text" class="form-control" id="fullName" />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" class="form-control" id="email" />
-          </div>
-          <div class="mb-3">
-            <label for="priority" class="form-label">Važnost poruke</label>
-            <select class="form-select" id="priority">
-              <option selected>Visoka</option>
-              <option>Srednja</option>
-              <option>Niska</option>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Poruka</label>
-            <textarea class="form-control" id="message" rows="4"></textarea>
-          </div>
-          <div class="form-check mb-3">
-            <input type="checkbox" class="form-check-input" id="notifications" />
-            <label class="form-check-label" for="notifications">Želim primati obavijesti</label>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Pošalji</button>
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Odustani</button>
-      </div>
-    </div>
-  </div>
-</div>
+          <div id="kontakt-modal-placeholder"></div>
 
+          <script>
+            // Učitavanje kontakt modala
+            fetch('kontakt-modal.html')
+              .then(response => response.text())
+              .then(html => {
+                document.getElementById('kontakt-modal-placeholder').innerHTML = html;
+              });
+          </script>
+
+<script src="./contact.js"></script>
+<script src="./open-contact.js"></script>
 </body>
- 
+
+
 <footer>
   <div class="footer-of-page">
     <h2 id="first">Budi izvrstan u onom što voliš</h2>
