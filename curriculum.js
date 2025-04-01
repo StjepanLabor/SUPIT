@@ -18,7 +18,7 @@ $(document).ready(function () {
         }
       );
 
-      if (!res.ok) throw new Error("Nije moguće dohvatiti kolegije.");
+      if (!res.ok) throw new Error("Ne mogu dohvatiti kolegije.");
       const data = await res.json();
 
       $("#subject").empty();
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $("#subject").append(`<option value="${course.kolegij}"></option>`);
       });
     } catch (err) {
-      console.error("Greška:", err);
+      console.error("Greška kod učitavanja kolegija:", err);
     }
   }
 
@@ -63,39 +63,38 @@ $(document).ready(function () {
       const c = data.data;
 
       const row = `
-          <tr id="row-${c.id}">
-            <td>${c.courseName}</td>
-            <td class="ects">${c.ects}</td>
-            <td class="hours">${c.numberOfLectures + c.numberOfPractice}</td>
-            <td class="lectures">${c.numberOfLectures}</td>
-            <td class="exercises">${c.numberOfPractice}</td>
-            <td>${c.type}</td>
-            <td><button class="remove-btn" data-id="${
-              c.id
-            }">Delete</button></td>
-          </tr>
-        `;
+      <tr id="row-${c.id}">
+        <td>${c.kolegij}</td>
+        <td class="ects">${c.ects}</td>
+        <td class="hours">${c.sati}</td>
+        <td class="lectures">${c.predavanja}</td>
+        <td class="exercises">${c.vjezbe}</td>
+        <td>${c.tip}</td>
+        <td><button class="remove-btn" data-id="${c.id}">Ukloni</button></td>
+      </tr>
+    `;
 
       $("#selected-curriculum-table tbody").append(row);
+      $("#selected-curriculum-table").show(); // ← POKAŽI TABLICU
       ensureTotalsRow();
       updateTotals();
     } catch (err) {
-      console.error("Greška:", err);
+      console.error("Greška kod dohvaćanja kolegija:", err);
     }
   }
 
   function ensureTotalsRow() {
     if ($("#totals-row").length === 0) {
       const totals = `
-          <tr id="totals-row">
-            <td><strong>Ukupno</strong></td>
-            <td id="total-ects">0</td>
-            <td id="total-hours">0</td>
-            <td id="total-lectures">0</td>
-            <td id="total-exercises">0</td>
-            <td></td><td></td>
-          </tr>
-        `;
+        <tr id="totals-row">
+          <td><strong>Ukupno</strong></td>
+          <td id="total-ects">0</td>
+          <td id="total-hours">0</td>
+          <td id="total-lectures">0</td>
+          <td id="total-exercises">0</td>
+          <td></td><td></td>
+        </tr>
+      `;
       $("#selected-curriculum-table tbody").append(totals);
     } else {
       $("#totals-row").appendTo("#selected-curriculum-table tbody");
@@ -109,10 +108,13 @@ $(document).ready(function () {
       exercises = 0;
 
     $("#selected-curriculum-table tbody tr").each(function () {
-      ects += parseInt($(this).find(".ects").text()) || 0;
-      hours += parseInt($(this).find(".hours").text()) || 0;
-      lectures += parseInt($(this).find(".lectures").text()) || 0;
-      exercises += parseInt($(this).find(".exercises").text()) || 0;
+      const $row = $(this);
+      if ($row.attr("id") !== "totals-row") {
+        ects += parseInt($row.find(".ects").text()) || 0;
+        hours += parseInt($row.find(".hours").text()) || 0;
+        lectures += parseInt($row.find(".lectures").text()) || 0;
+        exercises += parseInt($row.find(".exercises").text()) || 0;
+      }
     });
 
     $("#total-ects").text(ects);
@@ -120,8 +122,10 @@ $(document).ready(function () {
     $("#total-lectures").text(lectures);
     $("#total-exercises").text(exercises);
 
-    if ($("#selected-curriculum-table tbody tr").length <= 1) {
-      $("#totals-row").remove();
+    // Ako nema kolegija, sakrij tablicu
+    const hasRows = $("#selected-curriculum-table tbody tr").length > 1;
+    if (!hasRows) {
+      $("#selected-curriculum-table").hide();
     }
   }
 
