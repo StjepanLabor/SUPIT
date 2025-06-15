@@ -110,87 +110,55 @@ tfoot {
   min-height: 80vh;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .yellow-line {
-    width: 90%;
-    max-width: 500px;
-  }
-
-  .about-us {
-    margin-top: 110px;
-  }
-
-  .about-us h2 {
-    font-size: 20px;
-  }
-
-  #search-form {
-    margin-top: 20px;
-    padding: 0 15px;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box; /* Ensure padding/borders are included in width */
-  }
-
-  /* Flex container should stack elements vertically */
-  #flex-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-    box-sizing: border-box; /* Prevent content from overflowing */
-  }
-
-  #table-container {
-    width: 100%;
-    overflow: auto;
-    align-items: center;
-  }
-
-  /* Adjust the table to be full width and stack under the form */
-  #selected-curriculum-table {
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    display: none;
-    box-sizing: border-box; /* Prevent content from overflowing */
-    overflow-x: auto;
-  }
-
-  /* Adjust table padding for small screens */
-  #selected-curriculum-table th,
-  #selected-curriculum-table td {
-    padding: 6px 8px;
-    font-size: 12px;
-  }
-
-  /* Show the table header when there are rows */
-  #selected-curriculum-table tr:not(:empty) th {
-    display: table-cell;
-  }
-
-  /* Adjust the search parameters for small screens */
-  .search-parameters {
-    gap: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .search-parameters input {
-    padding: 8px;
-  }
-
-  /* Adjust the delete button size */
-  .delete-btn {
-    padding: 5px 10px;
-    font-size: 12px;
-  }
-}
 .nastavni-plan {
   font-size: 35px;
 }
 #search-input {
   width: 600px;
+}
+
+@media (max-width: 480px) {
+  .about-us {
+    margin-top: 80px;
+    padding: 0 10px;
+  }
+
+  .nastavni-plan {
+    font-size: 24px;
+  }
+
+  #search-input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  .search-parameters label {
+    font-size: 14px;
+  }
+
+  #selected-curriculum-table {
+    font-size: 11px;
+    overflow-x: auto;
+  }
+
+  #selected-curriculum-table th,
+  #selected-curriculum-table td {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+
+  .delete-btn {
+    font-size: 11px;
+    padding: 4px 6px;
+  }
+
+  .yellow-line {
+    width: 60%;
+  }
+
+  #flex-container {
+    padding: 0 10px;
+  }
 }

@@ -55,3 +55,52 @@
   position: absolute;
   bottom: 135px;
 }
+
+@media (max-width: 768px) {
+  .overlay-text {
+    font-size: 18px;
+    top: 40%;
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .award {
+    bottom: 100px;
+  }
+
+  .about-us h2 {
+    font-size: 22px;
+  }
+
+  #scholarship-section p {
+    font-size: 16px;
+    padding: 10px;
+    line-height: 1.4;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  #img-scholarship {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-text {
+    font-size: 16px;
+    top: 35%;
+    width: 95%;
+  }
+
+  .award {
+    bottom: 90px;
+  }
+
+  #scholarship-section p {
+    font-size: 15px;
+  }
+
+  #img-scholarship {
+    height: 200px;
+  }
+}
