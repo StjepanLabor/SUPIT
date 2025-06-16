@@ -45,9 +45,10 @@ body {
 .nav-list li a:hover {
   color: yellow;
 }
+
 #campus {
-  width: 100%; /* Smanjuje sliku da ne pređe širinu sekcije */
-  height: 280px; /* Održava proporcije slike */
+  width: 100%;
+  height: 280px;
   display: block;
   margin: 0 auto;
   object-fit: cover;

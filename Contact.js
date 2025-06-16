@@ -3,11 +3,11 @@ jQuery(document).ready(function () {
     var form = jQuery(this);
 
     var receiveNewsletter = jQuery("#notifications").prop("checked")
-      ? "true"
+      ? "true" //provjerava checkbox
       : "false";
 
-    var formData = form.serializeArray();
-    formData.push({ name: "ReceiveNewsletter", value: receiveNewsletter });
+    var formData = form.serializeArray(); //input
+    formData.push({ name: "ReceiveNewsletter", value: receiveNewsletter }); //jos jedno polje
 
     jQuery.ajax({
       url: "https://www.fulek.com/mvc/supit/project-contact-form",

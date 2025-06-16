@@ -26,9 +26,7 @@ $(document).ready(function () {
         subjectMap[course.kolegij] = course.id;
         $("#subject").append(`<option value="${course.kolegij}"></option>`);
       });
-    } catch (err) {
-      console.error("Greška kod učitavanja kolegija:", err);
-    }
+    } catch (err) {}
   }
 
   loadCurriculumList();
@@ -43,7 +41,6 @@ $(document).ready(function () {
         loadCourseDetails(id);
         $(this).val("");
       } else {
-        alert("Kolegij nije pronađen.");
       }
     }
   });
